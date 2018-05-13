@@ -1,3 +1,3 @@
 # Escalonador de processos
 
-[Descrição do trabalho](especificacao.md)
+[Descrição do trabalho](descricao.md)
