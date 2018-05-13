@@ -19,17 +19,17 @@
 
 //Tipo estruturado para o registro de algoritmos de escalonamento.
 //- name e' o nome do algoritmo com MAX_NAME_LEN caracteres (excluindo \0)
-//- initParamsFn e' a funcao para inicializar os parametros de escalonamento 
+//- initParamsFn e' a funcao para inicializar os parametros de escalonamento
 //               especificamente para o algoritmo
 //- scheduleFn e' a funcao para decidir qual o proximo processo a obter a CPU
 //             especificamente para o algoritmo
 //- releaseParamsFn e' a funcao para liberar os parametros de escalonemnto de um
 //                  processo especificamente para o algoritmo
 typedef struct sched_info {
-        char name[MAX_NAME_LEN+1];
-        void (*initParamsFn)(Process *p, void *params);
-        Process* (*scheduleFn)(Process *plist);
-        int (*releaseParamsFn)(Process *p);
+    char name[MAX_NAME_LEN+1];
+    void (*initParamsFn)(Process *p, void *params);
+    Process* (*scheduleFn)(Process *plist);
+    int (*releaseParamsFn)(Process *p);
 } SchedInfo;
 
 //Inicializa as informacoes sobre escalonadores

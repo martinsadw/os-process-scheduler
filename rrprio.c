@@ -30,33 +30,33 @@ const char rrprioName[]="RRPr";
 //Deve envolver a inicializacao de possiveis parametros gerais
 //Deve envolver o registro do algoritmo junto ao escalonador
 void rrpInitSchedInfo() {
-	//...
-    
-    
+    //...
+
+
 }
 
 //Inicializa os parametros de escalonamento de um processo p, chamada
 //normalmente quando o processo e' associado ao slot de RRPrio
 void rrpInitSchedParams(Process *p, void *params) {
-	//...
+    //...
 }
 
 //Retorna o proximo processo a obter a CPU, conforme o algortimo RRPrio
 Process* rrpSchedule(Process *plist) {
-	//...
-	return NULL;
+    //...
+    return NULL;
 }
 
-//Libera os parametros de escalonamento de um processo p, chamada 
+//Libera os parametros de escalonamento de um processo p, chamada
 //normalmente quando o processo e' desassociado do slot de RRPrio
 int rrpReleaseParams(Process *p) {
-	//...
-	return 0;
+    //...
+    return 0;
 }
 
 //Modifica a prioridade de um processo para um novo valor
 //Retorna o valor da prioridade anteriormente atribuida ao processo
 int rrpSetPrio(Process *p, int prio) {
-	//...
-	return 0;
+    //...
+    return 0;
 }
