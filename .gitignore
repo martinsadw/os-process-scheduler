@@ -52,6 +52,7 @@ Mkfile.old
 dkms.conf
 
 [Bb]in/
+[Oo]bj/
 [Dd]ebug/
 [Rr]elease/
 .depend

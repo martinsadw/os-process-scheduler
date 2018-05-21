@@ -1,7 +1,9 @@
 /*
 *  rrprio.c - Implementacao do algoritmo Round Robin com Prioridades
 *
-*  Autores: SUPER_PROGRAMADORES_C
+*  Autores: AndrÃ© Ferreira Martins
+            Lohan Rodrigues Narcizo Ferreira
+*           Lucas Carvalho Ribeiro
 *  Projeto: Trabalho Pratico I - Sistemas Operacionais
 *  Organizacao: Universidade Federal de Juiz de Fora
 *  Departamento: Dep. Ciencia da Computacao
@@ -43,10 +45,10 @@ PNode *perprio[8];
 void rrpInitSchedInfo() {
     SchedInfo *sched = malloc(sizeof(SchedInfo));
     strcpy(sched->name,rrprioName);
-	sched->initParamsFn = rrpInitSchedParams;
-	sched->scheduleFn = rrpSchedule;
-	sched->releaseParamsFn = rrpReleaseParams;
-	sched_slot = schedRegisterScheduler(sched);
+    sched->initParamsFn = rrpInitSchedParams;
+    sched->scheduleFn = rrpSchedule;
+    sched->releaseParamsFn = rrpReleaseParams;
+    sched_slot = schedRegisterScheduler(sched);
 }
 
 //Inicializa os parametros de escalonamento de um processo p, chamada
@@ -81,10 +83,10 @@ void rrpInitSchedParams(Process *p, void *params) {
 }
 
 //Retorna o proximo processo a obter a CPU, conforme o algortimo RRPrio
-//Para cada posição do vetor percorre todos os nodes verificando disponibilidade dos processos e tempo corrido
-//Se não há processos em uma posição ou todos estão bloqueados, inicia ciclo numa prioridade abaixo
-//Time_on verifica a quanto tempo o processo está na CPU, sendo 25 o tempo limite
-//Esse limite é zerado quando todos os elementos da lista receberem uma oportunidade de ir para CPU
+//Para cada posiï¿½ï¿½o do vetor percorre todos os nodes verificando disponibilidade dos processos e tempo corrido
+//Se nï¿½o hï¿½ processos em uma posiï¿½ï¿½o ou todos estï¿½o bloqueados, inicia ciclo numa prioridade abaixo
+//Time_on verifica a quanto tempo o processo estï¿½ na CPU, sendo 25 o tempo limite
+//Esse limite ï¿½ zerado quando todos os elementos da lista receberem uma oportunidade de ir para CPU
 Process* rrpSchedule(Process *plist) {
     int i,j;
     for(i=7; i>=0;i--)
@@ -118,7 +120,7 @@ Process* rrpSchedule(Process *plist) {
 
 //Libera os parametros de escalonamento de um processo p, chamada
 //normalmente quando o processo e' desassociado do slot de RRPrio
-//Remove PNode referente ao processo que está sendo destruido
+//Remove PNode referente ao processo que estï¿½ sendo destruido
 int rrpReleaseParams(Process *p) {
 
     RRPrioParams *prm = processGetSchedParams(p);

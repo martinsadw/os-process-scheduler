@@ -11,13 +11,13 @@ Descrição dos arquivos
 
 O simulador encontra-se escrito em linguagem C e é composto pelos seguintes arquivos:
 
-- `process.h:` Arquivo de cabeçalho para a declaração da API de manutenção de processos
-- `process.c:` Arquivo que implementa a API de manutenção de processos
-- `sched.h:` Arquivo de cabeçalho para a declaração da API de escalonamento de processos
-- `sched.c:` Arquivo com a implementação do escalonamento de processos
-- `rrprio.h:` Arquivo de cabeçalho para a declaração da API baseada no RRPrio Scheduling
-- `rrprio.c:` Arquivo com a implementação do escalonamento baseado em RRPrio Scheduling
-- `main.c:` Arquivo do programa principal do simulador
+- `process.h`: Arquivo de cabeçalho para a declaração da API de manutenção de processos
+- `process.c`: Arquivo que implementa a API de manutenção de processos
+- `sched.h`: Arquivo de cabeçalho para a declaração da API de escalonamento de processos
+- `sched.c`: Arquivo com a implementação do escalonamento de processos
+- `rrprio.h`: Arquivo de cabeçalho para a declaração da API baseada no RRPrio Scheduling
+- `rrprio.c`: Arquivo com a implementação do escalonamento baseado em RRPrio Scheduling
+- `main.c`: Arquivo do programa principal do simulador
 
 Restrições do trabalho
 ----------------------
